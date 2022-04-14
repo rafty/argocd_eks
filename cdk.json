@@ -26,6 +26,9 @@
     "@aws-cdk/core:target-partitions": [
       "aws",
       "aws-cn"
-    ]
+    ],
+    "repository-name": "rafty/argocd_eks",
+    "github-connection-arn": "arn:aws:codestar-connections:ap-northeast-1:338456725408:connection/f0a9cd57-37c1-49e9-91c0-32c131db2d3d",
+    "pipeline-name": "ArgoCdPipeline"
   }
 }
