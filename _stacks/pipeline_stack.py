@@ -48,7 +48,7 @@ class PipelineStack(Stack):
         # ----------------------------------------
         eks_cluster_dev_stage = EksClusterStage(
             scope=self,
-            construct_id='EksClusterDev',
+            construct_id='EksClusterStage',
             env=env
         )
         pipeline.add_stage(eks_cluster_dev_stage)

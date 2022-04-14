@@ -32,6 +32,7 @@ class EksClusterStack(Stack):
         self.__eks_cluster = aws_eks.Cluster(
             self,
             'EksCluster',
+            cluster_name='ArgoCD',
             output_cluster_name=True,
             version=aws_eks.KubernetesVersion.V1_21,
             endpoint_access=aws_eks.EndpointAccess.PUBLIC,
