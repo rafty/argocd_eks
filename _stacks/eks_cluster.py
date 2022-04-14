@@ -21,8 +21,8 @@ class EksClusterStack(Stack):
         # ----------------------------------------------------------
         owner_role = aws_iam.Role(
             scope=self,
-            id='EksClusterOwnerRole',
-            role_name='EksClusterOwnerRole',
+            id='ArgocdEksClusterOwnerRole',
+            role_name='ArgocdEksClusterOwnerRole',
             assumed_by=aws_iam.AccountRootPrincipal()
         )
 
