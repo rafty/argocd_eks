@@ -6,6 +6,7 @@ from aws_cdk.pipelines import CodePipelineSource
 from aws_cdk.pipelines import ShellStep
 from _constructs.eks_cluster_stage_construct import EksClusterStage
 
+
 class PipelineStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, env: aws_cdk.Environment, **kwargs) -> None:

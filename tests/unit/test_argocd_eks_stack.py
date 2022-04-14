@@ -1,10 +1,10 @@
 import aws_cdk as core
 import aws_cdk.assertions as assertions
 
-from _stacks.eks_cluster_stack import PipelineStack
+from _stacks.pipeline_stack import PipelineStack
 
 # example tests. To run these tests, uncomment this file along with the example
-# resource in _stacks/eks_cluster_stack.py
+# resource in _stacks/pipeline_stack.py
 def test_sqs_queue_created():
     app = core.App()
     stack = PipelineStack(app, "argocd-eks")
