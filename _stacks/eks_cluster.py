@@ -42,6 +42,13 @@ class EksClusterStack(Stack):
             default_capacity=2
         )
 
+        # kubectl commandを実行できるIAM Userを追加
+        self.__eks_cluster.aws_auth.add_user_mapping(
+            user=aws_iam.User.from_user_name(self, 'K8SUser-yagitatakashi', 'yagitatakashi'),
+            groups=['system:masters']
+        )
+
     @property
     def cluster(self):
         return self.__eks_cluster
+

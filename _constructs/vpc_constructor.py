@@ -15,8 +15,9 @@ class VpcConstructor(Construct):
         self.__vpc = aws_ec2.Vpc(
             self,
             'Vpc',
-            max_azs=2,
             cidr='10.11.0.0/16',
+            max_azs=2,
+            nat_gateways=2,
             subnet_configuration=[
                 aws_ec2.SubnetConfiguration(
                     subnet_type=aws_ec2.SubnetType.PUBLIC,
@@ -27,7 +28,6 @@ class VpcConstructor(Construct):
                     name="Private",
                     cidr_mask=24),
             ],
-            nat_gateways=2
         )
 
     @property
